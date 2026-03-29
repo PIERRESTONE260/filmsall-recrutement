@@ -45,7 +45,7 @@ function Affiche() {
 // ==========================================
 // 4. CONFIGURATION ET ENVOI EMAILJS
 // ==========================================
-emailjs.init("m5g95xmPymbqe8fbb"); // Ta clé publique
+emailjs.init("jiHStBzmT7mOYnopC"); // Ta clé publique
 
 const form = document.getElementById('Form');
 const btnSubmit = document.getElementById('btn-submit');
