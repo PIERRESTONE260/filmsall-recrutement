@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILMSall - Recrutement</title>
+    <link rel="shortcut icon" href="logo/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Police d'écriture Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Script EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo/icon.png" width="100" alt="Logo FILMSall" id="logo">
+        </div>
+    </header>
+
+    <main>
+        <!-- Section PDG -->
+        <section class="pdg-section">
+            <h1>RECRUTEMENT DE PARTENAIRES</h1>
+            <p>Rejoignez l'équipe dynamique de FILMSall et participez à l'évolution de notre plateforme.</p>
+            <div id="click"></div>
+            <button type="button" class="btn-pdg" onclick="Affiche()">Voir le PDG du projet</button>
+        </section>
+
+        <!-- Section Formulaire avec système de limitation -->
+        <section class="form-section">
+            <h1 id="titre-formulaire">FORMULAIRE À REMPLIR</h1>
+            <p class="limite-badge">⚠️ Places très limitées</p>
+            
+            <!-- Message caché par défaut (s'affichera si recrutement fermé ou déjà postulé) -->
+            <div id="message-fermeture" style="display: none;">
+                <h2>Les recrutements sont actuellement fermés.</h2>
+                <p>Merci de l'intérêt que vous portez à FILMSall.</p>
+            </div>
+
+            <form id="Form">
+                <div class="input-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom..." required>
+                </div>
+
+                <div class="input-group">
+                    <label for="postnom">Post-Nom</label>
+                    <input type="text" id="postnom" name="postnom" placeholder="Votre post-nom..." required>
+                </div>
+
+                <div class="input-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom..." required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="exemple@gmail.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="number">Téléphone</label>
+                    <input type="tel" name="number" id="number" placeholder="+243..." required>
+                </div>
+
+                <div class="input-group">
+                    <label for="genre">Genre</label>
+                    <select name="genre" id="genre" required>
+                        <option value="">Sélectionnez un genre</option>
+                        <option value="Masculin">Masculin</option>
+                        <option value="Feminin">Féminin</option>
+                        <option value="Autres">Autres</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="langue">Langue(s) parlée(s)</label>
+                    <input type="text" id="langue" name="langue" placeholder="Français, Anglais...">
+                </div>
+
+                <div class="input-group">
+                    <label for="experience">Expérience</label>
+                    <textarea name="experience" id="experience" rows="4" placeholder="Décrivez vos expériences..."></textarea>
+                </div>
+
+                <div class="input-group checkbox-group">
+                    <label>Langages / Compétences</label>
+                    <div class="checkbox-container">
+                        <label><input type="checkbox" name="competences" value="Java"> Java</label>
+                        <label><input type="checkbox" name="competences" value="JavaScript"> JavaScript</label>
+                        <label><input type="checkbox" name="competences" value="Php"> Php</label>
+                        <label><input type="checkbox" name="competences" value="Python"> Python</label>
+                        <label><input type="checkbox" name="competences" value="React"> React</label>
+                        <label><input type="checkbox" name="competences" value="Json"> Json</label>
+                        <label><input type="checkbox" name="competences" value="MySQL"> MySQL</label>
+                        <label><input type="checkbox" name="competences" value="Autres"> Autres</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="projets">Projets réalisés</label>
+                    <input type="url" name="url_projet" id="projets" placeholder="Url (lien) du projet...">
+                </div>
+
+                <div class="input-group">
+                    <label for="poste">Poste souhaité</label>
+                    <select name="poste" id="poste" required>
+                        <option value="">Sélectionnez un poste</option>
+                        <option value="Juge du Projet">Juge du Projet</option>
+                        <option value="Idées d'amélioration">Idées pour améliorer le projet</option>
+                        <option value="Titre des musiques">Titre des musiques</option>
+                        <option value="Annonce">Annonce (films, séries, animés et musique)</option>
+                        <option value="Titre des Films">Titre des Films</option>
+                        <option value="Titre des Animés">Titre des Animés</option>
+                        <option value="Testeur du projet">Testeur du projet</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btn-submit">Envoyer la candidature</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FILMSall. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#"><img src="image/linkedin-in-brands-solid-full.svg" alt="LinkedIn"></a>
+            <a href="#"><img src="image/github-brands-solid-full.svg" alt="GitHub"></a>
+            <a href="#"><img src="image/x-twitter-brands-solid-full.svg" alt="Twitter"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
