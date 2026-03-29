@@ -45,7 +45,7 @@ function Affiche() {
 // ==========================================
 // 4. CONFIGURATION ET ENVOI EMAILJS
 // ==========================================
-emailjs.init("jiHStBzmT7mOYnopC"); // Ta clé publique
+emailjs.init("yoa8uFtDtCYOcDL8w"); // Ta clé publique
 
 const form = document.getElementById('Form');
 const btnSubmit = document.getElementById('btn-submit');
@@ -81,8 +81,8 @@ form.addEventListener('submit', function(event) {
     };
 
     // Tes IDs de service et de template
-    const SERVICE_ID = "service_yxqsli2";
-    const TEMPLATE_ID = "template_k6a7kjq";
+    const SERVICE_ID = "service_ssckv0n";
+    const TEMPLATE_ID = "template_gdp2nxo";
 
     // Envoi via EmailJS
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
